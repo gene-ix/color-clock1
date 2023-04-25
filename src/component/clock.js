@@ -15,15 +15,13 @@ function Clock(props) {
     };
 
     let fwColor = {
-        color: `#${unix_hex6}`,
+        color: (alpha > 125) ? `#FFF` : `#${unix_hex6}FF`,
     };
-
-    let fwColorReverse = (alpha > 128) ? 'reverse' : '';
 
     return (
         <div style={bgColor} className="clock">
-            <div style={fwColor} className='colorCode'><span className={fwColorReverse}>#{unix_hex8}</span></div>
-            <div style={fwColor} className='getTime'><span className={fwColorReverse}>{dateTimeContext.date.toLocaleString()}</span></div>
+            <div style={fwColor} className='colorCode'><span>#{unix_hex8}</span></div>
+            <div style={fwColor} className='getTime'><span>{dateTimeContext.date.toLocaleString()}</span></div>
         </div>
     );
 }

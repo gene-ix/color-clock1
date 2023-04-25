@@ -21,7 +21,3 @@
 .getTime {
     font-size: min(7vw, 70px);
 }
-
-span.reverse {
-    filter: invert(100%);
-}
